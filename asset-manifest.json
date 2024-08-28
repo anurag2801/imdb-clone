@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/anurag2801/imdb-clone.git/static/css/main.488334ec.css",
+    "main.js": "/anurag2801/imdb-clone.git/static/js/main.c40dbfe1.js",
+    "index.html": "/anurag2801/imdb-clone.git/index.html",
+    "main.488334ec.css.map": "/anurag2801/imdb-clone.git/static/css/main.488334ec.css.map",
+    "main.c40dbfe1.js.map": "/anurag2801/imdb-clone.git/static/js/main.c40dbfe1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.488334ec.css",
+    "static/js/main.c40dbfe1.js"
+  ]
+}
