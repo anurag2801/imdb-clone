@@ -29,7 +29,7 @@ export default function Home() {
                 showStatus={false}
             >
                 {popularMovies.map((movie) => (
-                    <Link style={{ textDecoration: 'none', color: 'white' }} to={`/movie/${movie.id}`}>
+                    <Link rel='preload' style={{ textDecoration: 'none', color: 'white' }} to={`/movie/${movie.id}`}>
                         <div className='posterImage'>
                             <img src={`https://image.tmdb.org/t/p/original${movie && movie.backdrop_path}`} />
 
@@ -49,7 +49,9 @@ export default function Home() {
                 ))
                 }
             </Carousel>
+
             <MovieList />
+            
         </div>
         </>
 
