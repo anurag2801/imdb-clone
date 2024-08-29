@@ -3,7 +3,7 @@ import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a lo
 import { Carousel } from 'react-responsive-carousel';
 import { Link } from 'react-router-dom';
 import './Home.css'
-import MovieList from '../components/MovieList/MovieList';
+import MovieList from '../../components/MovieList/MovieList';
 
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
         fetch("https://api.themoviedb.org/3/movie/popular?api_key=4e44d9029b1270a757cddc766a1bcb63&language=en-US")
             .then(res => res.json())
             .then(data => setPopularMovies(data.results))
-            //   .then(data => console.log(data.results))
+            //     .then(data => console.log(data.results))
             .catch(error => console.error('Error fetching data:', error));
     }, [])
     return (
@@ -27,6 +27,8 @@ export default function Home() {
                 transitionTime={3}
                 infiniteLoop={true}
                 showStatus={false}
+                useKeyboardArrows={true}
+
             >
                 {popularMovies.map((movie) => (
                     <Link rel='preload' style={{ textDecoration: 'none', color: 'white' }} to={`/movie/${movie.id}`}>
@@ -51,7 +53,7 @@ export default function Home() {
             </Carousel>
 
             <MovieList />
-            
+
         </div>
         </>
 
