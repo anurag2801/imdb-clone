@@ -127,9 +127,9 @@ const MovieDetails = () => {
 
                         <button
                             onClick={openModal}
-                            className="movie__homeButton movie__Button"
+                            className="movie__previewButton movie__PButton"
                         >
-                            Watch Trailer <i className="newTab fas fa-external-link-alt"></i>
+                            Trailer <i className="newTab fas fa-external-link-alt"></i>
                         </button>
 
                     )}
