@@ -4,6 +4,7 @@
     align-items: center;
     display: flex;
     justify-content: space-between;
+    background-color: #1a1919;
 }
 
 .headerLeft {
@@ -40,40 +41,92 @@ a>span:hover {
 .searchForm {
     display: flex;
     align-items: cleft;
+
 }
 
 .searchInput {
     padding: 5px 10px;
-    border: none;
-    border-radius: 8px 0 0 8px;
+    /* Increase padding for better spacing */
+    border: 2px solid #f3f3ee;
+    /* Border color for the input */
+    border-radius: 10px 0 0 10px;
+    /* Fully rounded left corners */
     outline: none;
     font-size: 16px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #55504a;
+    font-weight: 500;
+    width: 550px;
+    /* Increase width for wider search bar */
+    transition: border-color 0.3s ease;
+    /* Transition for border color change */
 }
 
 .searchButton {
-    padding: 5px 10px;
-    border: none;
+    padding: 7px 15px;
+    /* Increase padding for better spacing */
+    border: 2px solid #f3f3ee;
+    /* Same border color to match input */
     background-color: #f3f3ee;
-    /* IMDb yellow color */
+    /* Light background color */
     color: #797474;
+    /* Text color */
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
+    border-radius: 0 10px 10px 0;
+    /* Fully rounded right corners */
     font-size: 16px;
+    transition: background-color 0.3s ease;
+    /* Transition for hover effect */
+    display: flex;
+    /* Make button content align properly */
+    align-items: center;
+    /* Center icon vertically */
+    justify-content: center;
+    /* Center icon horizontally */
 }
 
 .searchButton:hover {
-    background-color: #fdd835;
-    /* Slightly darker yellow on hover */
+    background-color: #d6cece;
+    /* Change background on hover if needed */
 }
+
+/* New rule to target the FontAwesomeIcon */
+/* .searchButton .icon {
+    transition: transform 0.3s ease;
+   
+}
+
+.searchButton:hover .icon {
+    transform: scale(1.1);
+  
+} */
+
+/* Change border color on focus */
+/* .searchInput:focus {
+    border-color: #fdd835;
+    
+} */
 
 .signInButton {
     padding: 5px 10px;
     border: none;
-    background-color: #0e0d0d;
+    background-color: #1a1919;
     /* IMDb yellow color */
     color: #fff7f7;
     cursor: pointer;
-    font-size: 16px;
+    font-size: 18px;
     border-radius: 4px;
     font-weight: bold;
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
+    ;
+}
+
+.signInButton:hover {
+    transform: scale(1.1);
+    /* Slightly zoom in the button text on hover */
+    background-color: #292828;
+    /* Change background to grey on hover */
+    color: #ffdb3b;
+    /* Change text color to yellow on hover */
 }

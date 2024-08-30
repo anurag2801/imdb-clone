@@ -1,0 +1,123 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    /* Dark background with opacity */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    /* Ensures modal is on top */
+}
+
+.modal-content {
+    background: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 350px;
+    max-width: 90%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+.modal-logo {
+    display: block;
+    margin: 0 auto;
+    /* Center the logo */
+    width: 90px;
+    /* Adjust width as needed */
+}
+
+.modal-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    color: black;
+    font-size: 14px;
+
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.3rem;
+    font-weight: 550;
+    font-size: 14px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.password-info {
+    font-size: 0.8rem;
+    color: #555;
+    margin-top: 0.3rem;
+    display: block;
+}
+
+.submit-btn {
+    background-color: #fdd835;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #e6c900;
+}
+
+.signin-link {
+    margin-top: 1rem;
+    text-align: center;
+    color: black;
+}
+
+.signin-link a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.signin-link a:hover {
+    text-decoration: underline;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Fade Effect */
+.fade-effect {
+    height: 1.5px;
+    /* Height of the fade effect */
+    margin-top: 1rem;
+    background: linear-gradient(to right, transparent, #8a8984, transparent);
+    /* Center fade to both sides */
+    border-radius: 5px;
+    /* Optional: make the edges slightly rounded */
+}

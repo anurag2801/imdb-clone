@@ -3,12 +3,16 @@ import "./Header.css"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  // Import FontAwesome
 import { faMagnifyingGlass, faTwitter, } from '@fortawesome/free-brands-svg-icons'
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import SignUpModal from "../../pages/SignUpModel/SignUpModel";
 
 
 
 export default function Headers() {
 
     const [searchQuery, setSearchQuery] = useState(""); // State to manage search input
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
 
     // Function to handle search input change
     const handleInputChange = (e) => {
@@ -20,7 +24,11 @@ export default function Headers() {
         e.preventDefault();
         // Redirect or perform a search action
         console.log("Search Query:", searchQuery);
+
     };
+
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
     return (
         <div className="header">
             <div className="headerLeft">
@@ -37,19 +45,21 @@ export default function Headers() {
                     <input
                         type="text"
                         className="searchInput"
-                        placeholder="Search..."
+                        placeholder="Search...."
                         value={searchQuery}
                         onChange={handleInputChange}
                     />
 
                     <button type="submit" className="searchButton">
-                        <FontAwesomeIcon icon={faTwitter} />
+                        <FontAwesomeIcon icon={faSearch} />
                     </button>
                 </form>
             </div>
             {/* Right Section: Sign In Button */}
             <div className="headerRight">
-                <button className="signInButton">Sign In</button>
+                <button className="signInButton" onClick={openModal}>Sign In</button>
+                {/* SignUpModal component */}
+                <SignUpModal isOpen={isModalOpen} onClose={closeModal} />
             </div>
         </div>
 
