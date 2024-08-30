@@ -2,7 +2,6 @@ import React, { useState } from "react"
 import "./Header.css"
 import { Link } from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';  // Import FontAwesome
-import { faMagnifyingGlass, faTwitter, } from '@fortawesome/free-brands-svg-icons'
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import SignUpModal from "../../pages/SignUpModel/SignUpModel";
 
