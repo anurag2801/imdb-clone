@@ -173,11 +173,7 @@ const MovieDetails = () => {
                         allowFullScreen
                     ></iframe>
                 </Modal>
-                {/* <Modal
-                    isOpen={modalIsOpen}
-                    onClose={closeModal}
-                    videoId={trailerUrl}
-                /> */}
+
 
             </div>
     )

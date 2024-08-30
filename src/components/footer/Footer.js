@@ -3,7 +3,7 @@ import React from 'react';
 import QRcode from './qrcode.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
-    faTwitter, faInstagram, faYoutube, faLinkedin, faXTwitter,
+    faInstagram, faYoutube, faLinkedin, faXTwitter,
     faGithub
 } from '@fortawesome/free-brands-svg-icons';
 import './Footer.css'; // Create this file for styles
@@ -58,7 +58,8 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 {/* <span>© 1990-2024 by IMDb.com, Inc.</span> */}
-                <span>Anurag Website</span>
+                <span>IMDb Clone Website</span>
+
             </div>
         </footer>
     );

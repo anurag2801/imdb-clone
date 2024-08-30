@@ -5,6 +5,22 @@
 .list__title {
     font-size: 1.75rem;
     margin: 2.5rem;
+
+}
+
+.list__title::after {
+    content: '';
+    /* Required to generate a pseudo-element */
+    display: block;
+    /* Makes the pseudo-element a block-level element */
+    width: 100%;
+    /* Full width under the text */
+    height: 3px;
+    /* Height of the line; adjust as needed */
+    margin-top: 5px;
+    /* Adds some spacing between the text and the line */
+    background: linear-gradient(to right, yellow, transparent);
+    /* Gradient effect fading from yellow to transparent */
 }
 
 .list__cards {

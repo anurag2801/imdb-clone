@@ -51,3 +51,181 @@
     text-align: left;
     width: 50%;
 }
+
+.section-heading {
+    margin-left: 60px;
+    text-align: left;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 30px;
+    /* Space between heading and carousel */
+}
+
+.section-heading:after {
+    content: '';
+    /* Required to generate a pseudo-element */
+    display: block;
+    /* Makes the pseudo-element a block-level element */
+    width: 100%;
+    /* Full width under the text */
+    height: 3px;
+    /* Height of the line; adjust as needed */
+    margin-top: 5px;
+    /* Adds some spacing between the text and the line */
+    background: linear-gradient(to right, yellow, transparent);
+    /* Gradient effect fading from yellow to transparent */
+    margin-bottom: 10px;
+}
+
+.embla {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding: 0 40px;
+    /* Adjust left and right padding for margins */
+    margin-bottom: 100px;
+}
+
+.embla__viewport {
+    overflow: hidden;
+    width: 100%;
+}
+
+.embla__container {
+    display: flex;
+    gap: 33px;
+    /* Reduced gap between images */
+    padding: 0;
+}
+
+.embla__slide {
+    flex: 0 0 auto;
+    /* Ensure the slide does not shrink */
+    width: 200px;
+    /* Fixed width for slides */
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Actor Image styling */
+.actorImage {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    background: #f0f0f0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    /* Allows overlay positioning */
+    margin-bottom: 10px;
+    /* Spacing below images */
+}
+
+.actorImage:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.actorImage img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Overlay to display actor details */
+.actorImage__overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    /* Dark overlay for contrast */
+    color: white;
+    padding: 8px;
+    box-sizing: border-box;
+    text-align: center;
+    opacity: 1;
+    /* Ensure visibility */
+    transition: opacity 0.3s ease;
+    font-size: 0.9rem;
+    /* Font size for readability */
+    border-radius: 0 0 10px 10px;
+    /* Rounded corners at the bottom */
+}
+
+.actorImage__title {
+    font-weight: bold;
+    margin: 4px 0;
+    /* Adjust margins for spacing */
+}
+
+.actorImage__runtime {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 4px;
+    font-size: 0.8rem;
+    /* Smaller font size for details */
+}
+
+.actorImage__rating {
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+
+.actorImage__rating i {
+    margin-left: 4px;
+    /* Space between rating number and star icon */
+}
+
+/* Navigation buttons */
+.embla__prev,
+.embla__next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 10;
+    border-radius: 50%;
+    width: 40px;
+    /* Width of the arrow button */
+    height: 40px;
+    /* Height of the arrow button */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    /* Font size of the arrows */
+}
+
+.embla__prev {
+    left: 20px;
+    /* Adjust as needed */
+}
+
+.embla__next {
+    right: 20px;
+    /* Adjust as needed */
+}
+
+.embla__prev:hover,
+.embla__next:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+/* Prevent horizontal scroll */
+/* body {
+    overflow-x: hidden;
+} */

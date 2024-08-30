@@ -6,8 +6,7 @@
     justify-content: space-between;
 }
 
-.headerLeft,
-.headerRight {
+.headerLeft {
     display: flex;
     align-items: center;
 
@@ -21,7 +20,7 @@ a>span {
 }
 
 a>span:hover {
-    color: red;
+    color: rgb(255, 208, 0);
 }
 
 .header__icon {
@@ -31,4 +30,50 @@ a>span:hover {
 
 .user__avatar {
     font-size: 2rem;
+}
+
+.headerRight {
+    display: flex;
+    align-items: left;
+}
+
+.searchForm {
+    display: flex;
+    align-items: cleft;
+}
+
+.searchInput {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 8px 0 0 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+.searchButton {
+    padding: 5px 10px;
+    border: none;
+    background-color: #f3f3ee;
+    /* IMDb yellow color */
+    color: #797474;
+    cursor: pointer;
+    border-radius: 0 4px 4px 0;
+    font-size: 16px;
+}
+
+.searchButton:hover {
+    background-color: #fdd835;
+    /* Slightly darker yellow on hover */
+}
+
+.signInButton {
+    padding: 5px 10px;
+    border: none;
+    background-color: #0e0d0d;
+    /* IMDb yellow color */
+    color: #fff7f7;
+    cursor: pointer;
+    font-size: 16px;
+    border-radius: 4px;
+    font-weight: bold;
 }
